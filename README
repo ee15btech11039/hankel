@@ -1,7 +1,8 @@
 The earlier defined hankelsv function in scilab can be used only for continous state space model,
-here i have tried to implement the given hankelsv function on a more broader inputs like that of hsvd function of matlab,this function works fine for state space as well as rational model for both continous as well as discrete systems
-also using the same algo of dtsi funtion for continous model with slight modifiations(changing the schur function input and lyonov equation)
-i was able to implement it for discrete time unstable models,
+here i have tried to implement the given hankelsv function on a more broader inputs like that of 
+hsvd function of matlab,this function works fine for state space as well as rational model for both 
+continous as well as discrete systems using the same algo of dtsi funtion for continous model with 
+slight modifiations(changing the schur function input and lyonov equation) i was able to implement it for discrete time unstable models,
 i have cross verified the results with matlab hsvd function,and it works well for upto 10^-3 degree of approximation.
 
 
