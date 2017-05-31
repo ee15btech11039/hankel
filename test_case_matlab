@@ -1,0 +1,57 @@
+%test case comparision
+%no. 1
+a=[-0.4134964,-0.2235264;0.3686702,-0.2150430]
+b=[-1.5040716,-1.1033188]'
+c=[-2.4574226,-4.441D-16]
+d=[0]
+s=tf(s)
+sys1=ss(a,b,c,d)
+g10=hsvd(sys1)
+sys11=c2d(sys1,0.1)
+g11=hsvd(sys11)
+sys12=c2d(sys1,0.01)
+g12=hsvd(sys12)
+sys13=c2d(sys1,1)
+g13=hsvd(sys13)
+sys14=c2d(sys1,0.5)
+g14=hsvd(sys14)
+sys15=c2d(sys1,2)
+g15=hsvd(sys15)
+
+%no.2
+sys2=s/(s+2)/(s-1.25)/(s-3.5)
+g20=hsvd(sys2)
+sys21=c2d(sys2,0.1)
+g21=hsvd(sys21)
+sys22=c2d(sys2,0.01)
+g22=hsvd(sys22)
+sys23=c2d(sys2,0.5)
+g23=hsvd(sys23)
+sys24=c2d(sys2,1)
+g24=hsvd(sys24)
+sys25=c2d(sys2,2)
+g25=hsvd(sys25)
+
+%no.3
+a=[-0.5566,1.0000,-1.2472,-0.8536;-0.0197,-0.5566,0.8283,0.5669;0,0,1.7550,1.4611;0,0,0,0.8605]
+b=[0,0,0,2.9837]'
+c=[3.0574,0,1.0898,0.7459]
+d=0
+sys3=ss(a,b,c,d)
+g30=hsvd(sys3)
+sys31=c2d(sys3,0.1)
+g31=hsvd(sys31)
+sys32=c2d(sys3,0.2)
+g32=hsvd(sys32)
+sys33=c2d(sys3,1)
+g33=hsvd(sys33)
+sys34=c2d(sys3,2)
+g34=hsvd(sys34)
+sys35=c2d(sys3,5)
+g35=hsvd(sys35)
+sys36=c2d(sys,0.0001)
+g36=hsvd(sys36)
+
+fileID = fopen('text document.txt','w');
+fprintf(fileID,'%d \n',g0)
+fclose(fileID);
